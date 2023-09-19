@@ -1,0 +1,27 @@
+[
+    {
+        "productName": "Abominable Hoodie",
+        "size": "M",
+        "color": "Green",
+        "quantity": "2"
+    },
+    {
+        "productName": "Atlas Fitness Tank",
+        "size": "S",
+        "color": "Blue",
+        "quantity": "3"
+    },
+    
+    {
+        "productName": "Balboa Persistence Tee",
+        "size": "XS",
+        "color": "Gray",
+        "quantity": "1"
+    },
+    {
+        "productName": "Bruno Compete Hoodie",
+        "size": "XS",
+        "color": "Green",
+        "quantity": "4"
+    }
+]
