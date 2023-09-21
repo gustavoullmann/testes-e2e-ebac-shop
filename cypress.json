@@ -1,4 +1,5 @@
 {
   "baseUrl": "http://lojaebac.ebaconline.art.br/",
-  "watchForFileChanges": false
+  "watchForFileChanges": false,
+  "projectId": "5xqjba"
 }
