@@ -29,23 +29,27 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.registerNewUser(email, password)
         cy.get('#primary-menu > .menu-item-629 > a')
             .click()
-        cy.addProductToCart(dadosProdutos[0].productName,
+        cy.addProductToCart(
+            dadosProdutos[0].productName,
             dadosProdutos[0].color,
             dadosProdutos[0].size,
             dadosProdutos[0].quantity)
-        cy.addProductToCart(dadosProdutos[1].productName,
+        cy.addProductToCart(
+            dadosProdutos[1].productName,
             dadosProdutos[1].size,
             dadosProdutos[1].color,
             dadosProdutos[1].quantity)
         cy.get(':nth-child(2) > .page-numbers')
             .click()
-        cy.addProductToCart(dadosProdutos[2].productName,
+        cy.addProductToCart(
+            dadosProdutos[2].productName,
             dadosProdutos[2].color,
             dadosProdutos[2].size,
             dadosProdutos[2].quantity)
         cy.get(':nth-child(2) > .page-numbers')
             .click()
-        cy.addProductToCart(dadosProdutos[3].productName,
+        cy.addProductToCart(
+            dadosProdutos[3].productName,
             dadosProdutos[3].size,
             dadosProdutos[3].color,
             dadosProdutos[3].quantity)
@@ -58,15 +62,15 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             .check()
         cy.get('#place_order')
             .click()
-                cy.get('.page-title')
-                    .should('contain', 'Pedido recebido')
-                cy.get('tbody > :nth-child(1) > .woocommerce-table__product-name')
-                    .should('contain', dadosProdutos[0].productName)
-                cy.get('tbody > :nth-child(4) > .woocommerce-table__product-name')
-                    .should('contain', dadosProdutos[3].productName)
-                cy.get('tbody > :nth-child(2) > .woocommerce-table__product-name')
-                    .should('contain', dadosProdutos[1].productName)
-                cy.get('tbody > :nth-child(3) > .woocommerce-table__product-name')
-                    .should('contain', dadosProdutos[2].productName)
+        cy.get('.page-title')
+            .should('contain', 'Pedido recebido')
+        cy.get('tbody > :nth-child(1) > .woocommerce-table__product-name')
+            .should('contain', dadosProdutos[0].productName)
+        cy.get('tbody > :nth-child(2) > .woocommerce-table__product-name')
+            .should('contain', dadosProdutos[1].productName)
+        cy.get('tbody > :nth-child(3) > .woocommerce-table__product-name')
+            .should('contain', dadosProdutos[2].productName)
+        cy.get('tbody > :nth-child(4) > .woocommerce-table__product-name')
+            .should('contain', dadosProdutos[3].productName)
     });
 })
