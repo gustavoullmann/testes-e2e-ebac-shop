@@ -58,7 +58,6 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
             .check()
         cy.get('#place_order')
             .click()
-            .then(checkout => {
                 cy.get('.page-title')
                     .should('contain', 'Pedido recebido')
                 cy.get('tbody > :nth-child(1) > .woocommerce-table__product-name')
@@ -69,6 +68,5 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
                     .should('contain', dadosProdutos[1].productName)
                 cy.get('tbody > :nth-child(3) > .woocommerce-table__product-name')
                     .should('contain', dadosProdutos[2].productName)
-            })
     });
 })
